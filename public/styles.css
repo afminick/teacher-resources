@@ -2,12 +2,36 @@
     margin: 0;
     padding: 0;
     font-size: (1vw + 1em);
-    background-color: lightblue;
 }
 
+
+
 header {
+    position: fixed;
+    font-size: .8em;
+    top: 0;
     display: flex;
+    width: 100vw;
+    height: 12vh;
     justify-content: space-between;
+    border-bottom: 1px solid blue;
+    background-color: rgb(99,170,188);
+}
+
+header ul {
+    margin-left: auto;
+    padding-right: 8vw;
+}
+
+header ul li {
+    padding-left: 1vw;
+}
+
+footer {
+    width: 100vw;
+    background-color: rgb(99,170,188);
+    height: 5vh;
+    border-top: 1px solid blue;
 }
 
 .navbar ul {
@@ -15,4 +39,23 @@ header {
     display: flex;
     justify-content: space-between;
     list-style: none;
+}
+
+main {
+    justify-content: center;
+    width: 100vw;
+    margin-top: 12vh;
+    min-height: 83vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    background-color: rgb(33,101,131);
+}
+
+.article {
+    background-color: rgb(99,170,188);
+    width: 80vw;
+    border-radius: 10px;
+    padding: 5vh 1vw;
+    margin: 3vh auto 0;
+    box-shadow: 2px 2px 2px .5px rgba(0,0,0,0.3);
 }
