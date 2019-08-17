@@ -9,13 +9,25 @@ class App extends React.Component {
     super(props)
     this.state = {
         value:'',
-        menuOpen: false
+        menuOpen: true
     };
+
+    this.menuClick = this.menuClick.bind(this);
+
 }
+
+menuClick(event) {
+  /*event.preventDefault();*/
+  this.setState({menuOpen:!this.state.menuOpen})
+}
+
+
   render() {
     return (
       <div className="App">
-        <Header menuStatus={this.state.menuOpen} />
+        <Header 
+          menuStatus={this.state.menuOpen}
+          menuClick={this.menuClick} />
         <MainSite />
         <Footer />
       </div>
