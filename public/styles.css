@@ -34,11 +34,23 @@ footer {
     border-top: 1px solid blue;
 }
 
-.navbar ul {
+.navbar {
+    background-color: lightcoral;
+    position: absolute;
+    right: 3vw;
+    top: 1vh;
+    height: 15vh;
     width: 20vw;
-    display: flex;
-    justify-content: space-between;
+}
+
+.navbar ul {
     list-style: none;
+}
+
+.menuOpenButton {
+    position: absolute;
+    top:5%;
+    right:5%;
 }
 
 main {
