@@ -1,4 +1,5 @@
 import React from 'react'
+import { NONAME } from 'dns';
 
 function responsiveMenu(props) {
 
@@ -23,7 +24,7 @@ function Header(props) {
                 <h3>Your source for games, lesson plans, and more!</h3>
             </div>
             <div className="navbar">
-                <button onClick={props.menuClick} className="menuOpenButton">X</button>
+                <button style={props.menuStatus ? buttonStyle : null} onClick={props.menuClick} className="menuOpenButton">{props.menuStatus ? "Close" : "Open"}</button>
                 {props.menuStatus ? responsiveMenu() : null}
             </div>
             
@@ -31,6 +32,11 @@ function Header(props) {
             
         </header>
     )
+}
+
+const buttonStyle = {
+    boxShadow: 'none',
+    border: 'none'
 }
 
 export default Header;
