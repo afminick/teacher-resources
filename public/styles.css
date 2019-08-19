@@ -61,6 +61,15 @@ footer {
     line-height: 3em;
 }
 
+.navLink {
+    transition: 500ms;
+}
+
+.navLink:hover {
+    font-size: 1.2em;
+    transition: 500ms;
+}
+
 
 .menuOpenButton {
     position: absolute;

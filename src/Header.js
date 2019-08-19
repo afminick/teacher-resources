@@ -1,15 +1,14 @@
 import React from 'react'
-import { NONAME } from 'dns';
 
 function responsiveMenu(props) {
 
     return (
         <div className="openNavbar">
             <ul>
-                <li><a href="https://vigilant-lichterman-f14f98.netlify.com/">Tic-Tac-Toe</a></li>
-                <li><a href="https://goofy-montalcini-2ef709.netlify.com/">Hangman</a></li>
-                <li>Home</li>
-                <li>Home</li>
+                <li className="navLink">Home</li>
+                <li className="navLink"><a href="https://vigilant-lichterman-f14f98.netlify.com/">Tic-Tac-Toe</a></li>
+                <li className="navLink"><a href="https://goofy-montalcini-2ef709.netlify.com/">Hangman</a></li>
+                <li className="navLink">Contact Us</li>
             </ul>
             
         </div>
