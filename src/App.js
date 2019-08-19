@@ -9,7 +9,8 @@ class App extends React.Component {
     super(props)
     this.state = {
         value:'',
-        menuOpen: true
+        menuOpen: true,
+        gameMenu: false,
     };
 
     this.menuClick = this.menuClick.bind(this);
@@ -18,7 +19,8 @@ class App extends React.Component {
 
 menuClick(event) {
   /*event.preventDefault();*/
-  this.setState({menuOpen:!this.state.menuOpen})
+  const name = event.target.name;
+  this.setState({[name]:!this.state[name]})
 }
 
 
@@ -26,7 +28,7 @@ menuClick(event) {
     return (
       <div className="App">
         <Header 
-          menuStatus={this.state.menuOpen}
+          data={this.state}
           menuClick={this.menuClick} />
         <MainSite />
         <Footer />

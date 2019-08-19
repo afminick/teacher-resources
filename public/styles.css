@@ -43,7 +43,7 @@ footer {
 }
 
 .openNavbar {
-    height: 40vh;
+    min-height: 30vh;
     width: 25vh;
     border: 2px solid rgba(0,0,0,0.5);
     border-radius: 5px;
@@ -61,13 +61,20 @@ footer {
     line-height: 3em;
 }
 
+
 .navLink {
     transition: 500ms;
+    background-color: transparent;
+    border: none;
 }
 
 .navLink:hover {
     font-size: 1.2em;
     transition: 500ms;
+}
+
+.navLink:focus {
+    outline: 0;
 }
 
 
