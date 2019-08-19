@@ -8,6 +8,7 @@ function responsiveMenu(props) {
                 <li className="navLink">Home</li>
                 <li className="navLink">
                     <button className="navLink" 
+                        style={{transitionDelay:"0"}}
                         name="gameMenu" 
                         onClick={props.menuClick}>
                             {props.data.gameMenu ? "^ Games ^" : "v Games v"}
