@@ -1,4 +1,6 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 
 function responsiveMenu(props) {
 
@@ -15,9 +17,8 @@ function responsiveMenu(props) {
                     </button>
                 </li>
                 {props.data.gameMenu ? gamesNav() : null}
-                <li className="navLink">Contact Us</li>
+                <li id="contactUs" className="navLink">Contact Us</li>
             </ul>
-            
         </div>
     )
 }
@@ -30,7 +31,16 @@ function Header(props) {
                 <h3>Your source for games, lesson plans, and more!</h3>
             </div>
             <div className="navbar">
-                <button name="menuOpen" style={props.data.menuOpen ? buttonStyle : null} onClick={props.menuClick} className="menuOpenButton">{props.data.menuOpen ? "Close" : "Open"}</button>
+                <button 
+                    name="menuOpen" 
+                    style={props.data.menuOpen ? 
+                    buttonStyle : 
+                    null} 
+                    onClick={props.menuClick} 
+                    className="menuOpenButton">
+                        <FontAwesomeIcon className="barsIcon" icon="bars" />
+                        {/*{props.data.menuOpen ? "Close" : "Open"}*/}
+                    </button>
                 {props.data.menuOpen ? responsiveMenu(props) : null}
             </div>
             
