@@ -9,8 +9,8 @@ class App extends React.Component {
     super(props)
     this.state = {
         value:'',
-        menuOpen: false,
-        gameMenu: false,
+        menuOpen: true,
+        gameMenu: true,
     };
 
     this.menuClick = this.menuClick.bind(this);

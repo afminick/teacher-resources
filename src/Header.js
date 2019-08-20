@@ -6,9 +6,9 @@ function responsiveMenu(props) {
         <div className="openNavbar">
             <ul>
                 <li className="navLink">Home</li>
-                <li className="navLink">
+                <li className="navLink" id="gameMenu">
                     <button className="navLink" 
-                        style={{transitionDelay:"0"}}
+                        
                         name="gameMenu" 
                         onClick={props.menuClick}>
                             {props.data.gameMenu ? "^ Games ^" : "v Games v"}
@@ -47,7 +47,7 @@ const buttonStyle = {
 
 const gamesNav = () => {
     return (
-        <div>
+        <div className='subMenu'>
             <li className="navLink"><a href="https://vigilant-lichterman-f14f98.netlify.com/">Tic-Tac-Toe</a></li>
             <li className="navLink"><a href="https://goofy-montalcini-2ef709.netlify.com/">Hangman</a></li>
         </div>
