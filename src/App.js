@@ -20,7 +20,8 @@ class App extends React.Component {
 
 menuClick(event) {
   /*event.preventDefault();*/
-  const name = event.target.name;
+  const name = event.currentTarget.name;
+  console.log(name);
   this.setState({[name]:!this.state[name]})
 }
 

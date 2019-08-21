@@ -118,9 +118,7 @@ footer {
     right:2px;
 }
 
-.barsIcon {
-    transform: scale(2);
-}
+
 
 .menuOpenButton:focus {
     outline: 0;

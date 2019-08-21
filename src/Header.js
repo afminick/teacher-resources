@@ -38,7 +38,7 @@ function Header(props) {
                     null} 
                     onClick={props.menuClick} 
                     className="menuOpenButton">
-                        <FontAwesomeIcon className="barsIcon" icon="bars" />
+                        <FontAwesomeIcon name="menuOpen" icon="bars" size="3x" style={{color: 'red'}}/>
                         {/*{props.data.menuOpen ? "Close" : "Open"}*/}
                     </button>
                 {props.data.menuOpen ? responsiveMenu(props) : null}
