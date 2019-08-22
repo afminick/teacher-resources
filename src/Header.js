@@ -38,8 +38,7 @@ function Header(props) {
                     null} 
                     onClick={props.menuClick} 
                     className="menuOpenButton">
-                        <FontAwesomeIcon name="menuOpen" icon="bars" size="3x" style={{color: 'red'}}/>
-                        {/*{props.data.menuOpen ? "Close" : "Open"}*/}
+                        <FontAwesomeIcon name="menuOpen" icon="bars" size="2x" style={{color: 'red'}}/>
                     </button>
                 {props.data.menuOpen ? responsiveMenu(props) : null}
             </div>
@@ -62,6 +61,17 @@ const gamesNav = () => {
             <li className="navLink"><a href="https://goofy-montalcini-2ef709.netlify.com/">Hangman</a></li>
         </div>
         
+    )
+}
+
+const lessonPlansNav = () => {
+    return (
+        <div className="subMenu">
+            <li className="navLink"><a href="#">Master Course</a></li>
+            <li className="navLink"><a href="#">Grammar</a></li>
+            <li className="navLink"><a href="#">Levelled Reading</a></li>
+            <li className="navLink"><a href="#">Free Talk</a></li>
+        </div>
     )
 }
 
