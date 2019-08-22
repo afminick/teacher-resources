@@ -8,6 +8,15 @@ function responsiveMenu(props) {
         <div className="openNavbar">
             <ul>
                 <li className="navLink">Home</li>
+                <li className="navLink" id="lessonPlanMenu">
+                    <button className="navLink" 
+                        
+                        name="lessonPlanMenu" 
+                        onClick={props.menuClick}>
+                            {props.data.lessonPlanMenu ? "^ Lesson Plans ^" : "v Lesson Plans v"}
+                    </button>
+                </li>
+                {props.data.lessonPlanMenu ? lessonPlansNav() : null}
                 <li className="navLink" id="gameMenu">
                     <button className="navLink" 
                         

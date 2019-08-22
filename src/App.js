@@ -11,7 +11,8 @@ class App extends React.Component {
     this.state = {
         value:'',
         menuOpen: true,
-        gameMenu: true,
+        gameMenu: false,
+        lessonPlanMenu: false
     };
 
     this.menuClick = this.menuClick.bind(this);
