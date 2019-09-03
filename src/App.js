@@ -11,7 +11,8 @@ class App extends React.Component {
         value:'',
         menuOpen: true,
         gameMenu: false,
-        lessonPlanMenu: false
+        lessonPlanMenu: false,
+        contactMenu: true
     };
 
     this.menuClick = this.menuClick.bind(this);
@@ -19,7 +20,7 @@ class App extends React.Component {
 }
 
 menuClick(event) {
-  /*event.preventDefault();*/
+  
   const name = event.currentTarget.name;
   this.setState({[name]:!this.state[name]})
 }

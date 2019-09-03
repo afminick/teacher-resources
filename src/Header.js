@@ -26,7 +26,14 @@ function responsiveMenu(props) {
                     </button>
                 </li>
                 {props.data.gameMenu ? gamesNav() : null}
-                <li id="contactUs" className="navLink">Contact Us</li>
+                <li id="contactUs" className="navLink">
+                    <button className="navLink"
+                        name="contactMenu"
+                        onClick={props.menuClick}>
+                            {props.data.contactMenu ? "^ Contact Us ^" : "v Contact Us v"}
+                    </button>
+                </li>
+                {props.data.contactMenu ? contactUsNav() : null}
             </ul>
         </div>
     )
@@ -80,6 +87,17 @@ const lessonPlansNav = () => {
             <li className="navLink"><a href="#">Grammar</a></li>
             <li className="navLink"><a href="#">Levelled Reading</a></li>
             <li className="navLink"><a href="#">Free Talk</a></li>
+        </div>
+    )
+}
+
+const contactUsNav = () => {
+    return(
+        <div className="subMenu" id="contactUsNav">
+            <a className="contactLink" href="#"><FontAwesomeIcon icon="envelope" size="2x" /></a>
+            <a className="contactLink" href="#"><FontAwesomeIcon icon={['fab', 'facebook-square']} size="2x" /></a>
+            <a className="contactLink" href="#"><FontAwesomeIcon icon={['fab', 'instagram']} size="2x" /></a>
+            <a className="contactLink" href="#"><FontAwesomeIcon icon={['fab', 'twitter-square']} size='2x'/></a>
         </div>
     )
 }
