@@ -102,13 +102,19 @@ footer {
     display: flex;
     justify-content: center;
     border-top: 1px solid black;
-    border-bottom: none;
+    
+    margin: auto;
+}
+
+#contactUsNav a svg {
+    padding-top:30%;
     margin: auto;
 }
 
 .contactLink {
     margin: auto;
-    border-bottom: none;
+    height:100%;
+    
 }
 
 
