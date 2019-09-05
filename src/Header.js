@@ -85,7 +85,7 @@ const lessonPlansNav = () => {
         <div className="subMenu">
             <li className="navLink"><a href="#">Master Course</a></li>
             <li className="navLink"><a href="#">Grammar</a></li>
-            <li className="navLink"><a href="#">Levelled Reading</a></li>
+            <li className="navLink"><a href="#">Leveled Reading</a></li>
             <li className="navLink"><a href="#">Free Talk</a></li>
         </div>
     )

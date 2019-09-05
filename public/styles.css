@@ -100,10 +100,14 @@ footer {
 
 #contactUsNav {
     display: flex;
+    height: 50px;
     justify-content: center;
     border-top: 1px solid black;
-    
     margin: auto;
+}
+
+#contactUsNav:hover {
+    font-size: 1em;
 }
 
 #contactUsNav a svg {
@@ -113,8 +117,12 @@ footer {
 
 .contactLink {
     margin: auto;
-    height:100%;
+    transition: 500ms;
     
+}
+
+.contactLink:hover {
+    font-size: 1.2em;
 }
 
 
