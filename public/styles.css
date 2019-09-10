@@ -27,7 +27,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     background-color: rgb(99,170,188);
-    height: 5vh;
+    height: 4vh;
     
     box-shadow: 0 -1px 1px 0.5px rgba(0,0,0,0.5);
 }
