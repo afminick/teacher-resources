@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-function MainSite() {
+function HomeBody() {
     
     return (
         <main>
@@ -24,4 +24,4 @@ function MainSite() {
     )
 }
 
-export default MainSite;
+export default HomeBody;
