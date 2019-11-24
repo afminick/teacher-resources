@@ -1,45 +1,17 @@
-import React from 'react'
+import React, {useState}   from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Link } from 'react-router-dom'
 
 
-function responsiveMenu(props) {
+function Header() {
+    
+        const [value, setValue] = useState('');
+        const [menuOpen, setMenuOpen] = useState(false);
+        const [gameMenu, setGameMenu] = useState(false);
+        const [lessonPlanMenu, setLessonPlanMenu] = useState(false);
+        const [contactMenu, setContactMenu] = useState(false);
+    
 
-    return (
-        <div className="openNavbar">
-            <ul>
-                <li className="navLink">Home</li>
-                <li className="navLink" id="lessonPlanMenu">
-                    <button className="navLink" 
-                        
-                        name="lessonPlanMenu" 
-                        onClick={props.menuClick}>
-                            {props.data.lessonPlanMenu ? "^ Lesson Plans ^" : "v Lesson Plans v"}
-                    </button>
-                </li>
-                {props.data.lessonPlanMenu ? lessonPlansNav() : null}
-                <li className="navLink" id="gameMenu">
-                    <button className="navLink" 
-                        
-                        name="gameMenu" 
-                        onClick={props.menuClick}>
-                            {props.data.gameMenu ? "^ Games ^" : "v Games v"}
-                    </button>
-                </li>
-                {props.data.gameMenu ? gamesNav() : null}
-                <li id="contactUs" className="navLink">
-                    <button className="navLink"
-                        name="contactMenu"
-                        onClick={props.menuClick}>
-                            {props.data.contactMenu ? "^ Contact Us ^" : "v Contact Us v"}
-                    </button>
-                </li>
-                {props.data.contactMenu ? contactUsNav() : null}
-            </ul>
-        </div>
-    )
-}
-
-function Header(props) {
     return (
         <header>
             <div className="title">
@@ -49,22 +21,60 @@ function Header(props) {
             <div className="navbar">
                 <button 
                     name="menuOpen" 
-                    style={props.data.menuOpen ? 
+                    style={menuOpen ? 
                     buttonStyle : 
                     null} 
-                    onClick={props.menuClick} 
+                    onClick={() => setMenuOpen(!menuOpen)} 
                     className="menuOpenButton">
                         <FontAwesomeIcon name="menuOpen" icon="bars" size="2x" style={{color: 'red'}}/>
                     </button>
-                {props.data.menuOpen ? responsiveMenu(props) : null}
+                {menuOpen ? ResponsiveNavMenu() : null}
             </div>
             
             
             
         </header>
     )
-}
+    
 
+}
+    
+
+const ResponsiveNavMenu = () => {
+    return (
+        <div className="openNavbar">
+            <ul>
+                <li className="navLink">Home</li>
+                <li className="navLink" id="lessonPlanMenu">
+                    <button className="navLink" 
+                        
+                        name="lessonPlanMenu" 
+                        onClick={this.setLessonPlanMenu = this.lessonPlanMenu}>
+                            {this.lessonPlanMenu ? "^ Lesson Plans ^" : "v Lesson Plans v"}
+                    </button>
+                </li>
+                {this.state.lessonPlanMenu ? lessonPlansNav() : null}
+                <li className="navLink" id="gameMenu">
+                    <button className="navLink" 
+                        
+                        name="gameMenu" 
+                        onClick={this.state.menuClick}>
+                            {this.state.gameMenu ? "^ Games ^" : "v Games v"}
+                    </button>
+                </li>
+                {this.state.gameMenu ? gamesNav() : null}
+                <li id="contactUs" className="navLink">
+                    <button className="navLink"
+                        name="contactMenu"
+                        onClick={this.state.menuClick}>
+                            {this.state.contactMenu ? "^ Contact Us ^" : "v Contact Us v"}
+                    </button>
+                </li>
+                {this.state.contactMenu ? contactUsNav() : null}
+            </ul>
+        </div>
+    )
+    }
 const buttonStyle = {
     boxShadow: 'none',
     border: 'none'
@@ -73,7 +83,7 @@ const buttonStyle = {
 const gamesNav = () => {
     return (
         <div className='subMenu'>
-            <li className="navLink"><a href="https://vigilant-lichterman-f14f98.netlify.com/">Tic-Tac-Toe</a></li>
+            <li className="navLink"><Link to='/games'>Tic-Tac-Toe!</Link></li>
             <li className="navLink"><a href="https://goofy-montalcini-2ef709.netlify.com/">Hangman</a></li>
         </div>
         

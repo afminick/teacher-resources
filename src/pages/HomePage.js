@@ -1,12 +1,12 @@
 import React from 'react';
-import Header from './Header';
-import Footer from './Footer';
-import HomeBody from './HomeBody';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import HomeBody from '../components/HomeBody';
 
 
 
 class HomePage extends React.Component {
-  constructor(props) {
+/*  constructor(props) {
     super(props)
     this.state = {
         value:'',
@@ -25,7 +25,7 @@ menuClick(event) {
   const name = event.currentTarget.name;
   this.setState({[name]:!this.state[name]})
 }
-
+*/
 
   render() {
     return (
