@@ -1,12 +1,12 @@
 import React, {useState}   from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import ResponsiveNavMenu from './ResponsiveNavMenu'
-import { Link } from 'react-router-dom'
+//import { Link } from 'react-router-dom'
 
 
 function Header() {
     
-        const [menuOpen, setMenuOpen] = useState(false);
+        const [menuOpen, setMenuOpen] = useState(true);
 
     return (
         <header>

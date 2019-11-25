@@ -29,7 +29,7 @@ const ResponsiveNavMenu = () => {
                     </button>
                     {lessonPlanMenu ? lessonPlansNav() : null}
                 </li>
-                <li className="navLink">
+                <li className="navLink" id="contactUs">
                     <button
                         className="navLink"
                         onClick={()=> setContactMenu(!contactMenu)}
@@ -55,10 +55,10 @@ const ResponsiveNavMenu = () => {
     const lessonPlansNav = () => {
         return (
             <div className="subMenu">
-                <li className="navLink"><a href="#">Master Course</a></li>
-                <li className="navLink"><a href="#">Grammar</a></li>
-                <li className="navLink"><a href="#">Leveled Reading</a></li>
-                <li className="navLink"><a href="#">Free Talk</a></li>
+                <li className="navLink"><Link to='/'>Master Course</Link></li>
+                <li className="navLink"><Link to='/'>Grammar</Link></li>
+                <li className="navLink"><Link to='/'>Leveled Reading</Link></li>
+                <li className="navLink"><Link to='/'>Free Talk</Link></li>
             </div>
         )
     }
@@ -66,10 +66,10 @@ const ResponsiveNavMenu = () => {
     const contactUsNav = () => {
         return(
             <div className="subMenu" id="contactUsNav">
-                <a className="contactLink" href="#"><FontAwesomeIcon icon="envelope" size="2x" /></a>
-                <a className="contactLink" href="#"><FontAwesomeIcon icon={['fab', 'facebook-square']} size="2x" /></a>
-                <a className="contactLink" href="#"><FontAwesomeIcon icon={['fab', 'instagram']} size="2x" /></a>
-                <a className="contactLink" href="#"><FontAwesomeIcon icon={['fab', 'twitter-square']} size='2x'/></a>
+                <Link className="contactLink" to="/"><FontAwesomeIcon icon="envelope" size="2x" /></Link>
+                <Link className="contactLink" to="/"><FontAwesomeIcon icon={['fab', 'facebook-square']} size="2x" /></Link>
+                <Link className="contactLink" to="/"><FontAwesomeIcon icon={['fab', 'instagram']} size="2x" /></Link>
+                <Link className="contactLink" to="/"><FontAwesomeIcon icon={['fab', 'twitter-square']} size='2x'/></Link>
             </div>
         )
     }
