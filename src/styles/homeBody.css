@@ -1,0 +1,18 @@
+main {
+    justify-content: center;
+    width: 100%;
+    margin-top: 12vh;
+    min-height: 83vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    background-color: rgb(33,101,131);
+}
+
+.article {
+    background-color: rgb(99,170,188);
+    width: 80vw;
+    border-radius: 10px;
+    padding: 5vh 1vw;
+    margin: 3vh auto 0;
+    box-shadow: 2px 2px 2px .5px rgba(0,0,0,0.3);
+}

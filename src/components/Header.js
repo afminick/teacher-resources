@@ -1,6 +1,7 @@
 import React, {useState}   from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import ResponsiveNavMenu from './ResponsiveNavMenu'
+import '../styles/header.css'
 //import { Link } from 'react-router-dom'
 
 
