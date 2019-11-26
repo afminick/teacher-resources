@@ -1,40 +1,31 @@
 import React from 'react';
-import Header from './Header';
-import Footer from './Footer';
-import MainSite from './MainSite';
+import HomePage from './pages/HomePage'
+import PageNotFound from './pages/PageNotFound'
+import GamesPage from './pages/games/GamesPage'
+import WordGuess from './pages/games/wordguess/WordGuess'
+import { 
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Link,
+  Redirect
+ } from 'react-router-dom';
+
 
 
 class App extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-        value:'',
-        menuOpen: false,
-        gameMenu: false,
-        lessonPlanMenu: false,
-        contactMenu: false
-    };
-
-    this.menuClick = this.menuClick.bind(this);
-
-}
-
-menuClick(event) {
   
-  const name = event.currentTarget.name;
-  this.setState({[name]:!this.state[name]})
-}
-
-
   render() {
     return (
-      <div className="App">
-        <Header 
-          data={this.state}
-          menuClick={this.menuClick} />
-        <MainSite />
-        <Footer />
-      </div>
+      <Router>
+        <Switch>
+          <Route exact path='/' component={HomePage} />
+          <Route exact path='/games' component={GamesPage} />
+          <Route exact path='/games/wordguess' component={WordGuess} />
+          <Route exact path='/pagenotfound' component={PageNotFound} />
+          <Redirect to='/pagenotfound' />
+        </Switch>
+      </Router>
     );
   }
   
