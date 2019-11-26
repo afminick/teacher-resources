@@ -46,8 +46,8 @@ const ResponsiveNavMenu = () => {
     const gamesNav = () => {
         return (
             <div className='subMenu'>
-                <li className="navLink"><Link to='/games'>Tic-Tac-Toe!</Link></li>
-                <li className="navLink"><Link to='/games/wordguess'>Word Guess</Link></li>
+                <Link className="navLink" to='/games'>Tic-Tac-Toe!</Link>
+                <Link className="navLink" to='/games/wordguess'>Word Guess</Link>
             </div>
             
         )
@@ -56,10 +56,10 @@ const ResponsiveNavMenu = () => {
     const lessonPlansNav = () => {
         return (
             <div className="subMenu">
-                <li className="navLink"><Link to='/'>Master Course</Link></li>
-                <li className="navLink"><Link to='/'>Grammar</Link></li>
-                <li className="navLink"><Link to='/'>Leveled Reading</Link></li>
-                <li className="navLink"><Link to='/'>Free Talk</Link></li>
+                <Link className="navLink" to='/'>Master Course</Link>
+                <Link className="navLink" to='/'>Grammar</Link>
+                <Link className="navLink" to='/'>Leveled Reading</Link>
+                <Link className="navLink" to='/'>Free Talk</Link>
             </div>
         )
     }

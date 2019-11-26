@@ -7,7 +7,7 @@ import '../styles/header.css'
 
 function Header() {
     
-        const [menuOpen, setMenuOpen] = useState(true);
+        const [menuOpen, setMenuOpen] = useState(false);
 
     return (
         <header>

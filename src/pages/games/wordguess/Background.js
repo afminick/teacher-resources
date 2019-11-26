@@ -35,6 +35,7 @@ function Background(props) {
     if (props.course && props.level && props.unit && props.lessonCycle) {
       let wordKey = props.course + props.level + props.unit + props.lessonCycle + (props.lessonCycle === "1" ? "6" : "12")
       wordArray = data[wordKey].Words.split(", ")
+      wordArray.unshift(" ")
     } 
     
 
@@ -43,7 +44,7 @@ function Background(props) {
 
           const wordDropdown = 
             <div className="wordDropdown">
-              <p>Unit Words: </p>
+              <p>Choose a word from the unit</p>
               <select className="lessonSelectDropdown" name="value" onChange={props.handleChange}>
                 {wordDropdownWords}
               </select>

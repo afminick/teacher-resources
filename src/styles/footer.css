@@ -6,12 +6,13 @@ footer {
     align-items: center;
     background-color: rgb(99,170,188);
     height: 4vh;
-    
+    border-top: 2px groove rgb(33,101,131);
     box-shadow: 0 -1px 1px 0.5px rgba(0,0,0,0.5);
 }
 
 #footerContact {
     padding-right: 5px;
     display: flex;
+    justify-content: space-between;
     width: 20%;
 }

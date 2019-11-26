@@ -7,10 +7,10 @@ function Footer() {
         <footer>
             <p>AMWD</p>
             <div id="footerContact">
-                <a href="#"><FontAwesomeIcon icon="envelope"  size="2x" /></a>
-                <a href="#"><FontAwesomeIcon icon={['fab', 'facebook-square']}  size="2x" /></a>
-                <a href="#"><FontAwesomeIcon icon={['fab', 'instagram']}  size="2x" /></a>
-                <a href="#"><FontAwesomeIcon icon={['fab', 'twitter-square']} size="2x" /></a>
+                <a href="#"><FontAwesomeIcon icon="envelope"  size="1x" /></a>
+                <a href="#"><FontAwesomeIcon icon={['fab', 'facebook-square']}  size="1x" /></a>
+                <a href="#"><FontAwesomeIcon icon={['fab', 'instagram']}  size="1x" /></a>
+                <a href="#"><FontAwesomeIcon icon={['fab', 'twitter-square']} size="1x" /></a>
             </div>
         </footer>
     )
