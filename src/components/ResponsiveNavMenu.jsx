@@ -13,7 +13,7 @@ const ResponsiveNavMenu = () => {
         <div className="openNavBar">
             <ul>
                 <li className="navLink"><Link to='/'>Home</Link></li>
-                <li className="navLink">
+                <li className="navLink" id='gameMenu'>
                     <button
                         className="navLink"
                         onClick={() => setGameMenu(!gameMenu)}
@@ -21,7 +21,7 @@ const ResponsiveNavMenu = () => {
                     </button>
                     {gameMenu ? gamesNav() : null}
                 </li>
-                <li className="navLink">
+                <li className="navLink" id="lessonPlanMenu">
                     <button 
                         className='navLink'
                         onClick={()=> setLessonPlanMenu(!lessonPlanMenu)}
