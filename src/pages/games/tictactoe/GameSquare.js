@@ -3,7 +3,7 @@ import React from 'react'
 function GameSquare(props) {
     const letterSize = props.word.length > 8 ? {fontSize: '0.7em'} : {fontSize: '1em'};
     return (
-        <div className='tictactoeSquare' id={props.key}>
+        <div className='tictactoeSquare' id={props.number}>
             <h3 style={letterSize} className='squareWord'>{props.word}</h3>
             <h2 className='squareMark'>{props.mark}</h2>
             <div className='buttons'>

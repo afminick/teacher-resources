@@ -189,18 +189,19 @@ html, body {
 }
 
 .winner {
-    font-size: 3vw;
+    font-size: 1em;
     position: absolute;
+    width: 50%;
     color: rgb(13, 5, 133);
     background-color: rgba(255, 255, 255, 0.8);
     box-shadow: 1px 1px 10px 10px rgb(13, 5, 133);
-    top: 35%;
+    top: 40%;
     text-align: center;
 }
 
 
 @media screen and (max-width: 700px) {
-    .container {
+    .tictactoeContainer {
         height: 110vh;
         min-height: 150vw;
     }
@@ -227,7 +228,7 @@ html, body {
     }
 
     .winner {
-        top: 70%;
-        width: 90%;
+        top: 80%;
+        width: 100%;
     }
 }
