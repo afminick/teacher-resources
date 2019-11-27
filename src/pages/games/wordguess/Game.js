@@ -1,9 +1,9 @@
 import React from 'react';
-import GameSetup from './GameSetup';
-import GameArea from './GameArea';
+import WordguessSetup from './WordguessSetup';
+import WordguessArea from './WordguessArea';
 
 
-class Game extends React.Component {
+class Wordguess extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -124,13 +124,13 @@ class Game extends React.Component {
 
     render() {
         return (
-            <main className='game'>
+            <main className='wordguess'>
                 
-                <GameSetup 
+                <WordguessSetup 
                     data={this.state}
                     handleChange={this.handleChange}
                     submitWord={this.submitWord}/>
-                <GameArea
+                <WordguessArea
                     data={this.state}
                     guessLetter={this.guessLetter}
                     winner={this.winner}
@@ -142,4 +142,4 @@ class Game extends React.Component {
 
 
 
-export default Game
+export default Wordguess

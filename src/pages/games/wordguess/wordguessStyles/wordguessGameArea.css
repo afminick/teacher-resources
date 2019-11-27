@@ -1,4 +1,4 @@
-.gameArea {
+.wordguessArea {
     display: flex;
     flex-direction: column;
     justify-content: space-between;

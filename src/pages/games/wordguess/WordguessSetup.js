@@ -1,13 +1,13 @@
 import React from 'react'
-import './gameSetup.css'
+import './wordguessStyles/wordguessGameSetup.css'
 
 import LessonSelect from './LessonSelect'
 
-function GameSetup(props) {
+function wordguessSetup(props) {
 
     const used = props.data.usedWords.map((item,index) => <li key={item + index}>{item}</li> );
     return (
-        <div className='gameSetup'>
+        <div className='wordguessSetup'>
             <p>Type your word here</p>
             <form onSubmit={props.submitWord}>
                 <input 
@@ -36,4 +36,4 @@ function GameSetup(props) {
     )
 }
 
-export default GameSetup
+export default wordguessSetup

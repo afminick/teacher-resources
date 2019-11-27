@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import './lessonSelect.css'
+import './wordguessStyles/wordguessLessonSelect.css'
 
 import Background from './Background'
 

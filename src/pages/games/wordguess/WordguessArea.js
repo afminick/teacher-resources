@@ -1,14 +1,14 @@
 import React from 'react'
-import './gameArea.css'
+import './wordguessStyles/wordguessGameArea.css'
 
 import LetterBank from './LetterBank'
 import WordArea from './WordArea'
 import Animation from './Animation'
 
 
-function GameArea(props) {
+function wordguessArea(props) {
     return (
-        <div className='gameArea'>
+        <div className='wordguessArea'>
             <Animation data={props.data}/>
             <WordArea data={props.data}/>
             <LetterBank data={props.data} guessLetter={props.guessLetter}/>
@@ -17,4 +17,4 @@ function GameArea(props) {
     )
 }
 
-export default GameArea
+export default wordguessArea

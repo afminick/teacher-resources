@@ -46,7 +46,7 @@ const ResponsiveNavMenu = () => {
     const gamesNav = () => {
         return (
             <div className='subMenu'>
-                <Link className="navLink" to='/games'>Tic-Tac-Toe!</Link>
+                <Link className="navLink" to='/games/tictactoe'>Tic-Tac-Toe!</Link>
                 <Link className="navLink" to='/games/wordguess'>Word Guess</Link>
             </div>
             

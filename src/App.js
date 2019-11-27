@@ -3,11 +3,12 @@ import HomePage from './pages/HomePage'
 import PageNotFound from './pages/PageNotFound'
 import GamesPage from './pages/games/GamesPage'
 import WordGuess from './pages/games/wordguess/WordGuess'
+import TicTacToe from './pages/games/tictactoe/TicTacToe'
 import { 
   BrowserRouter as Router,
   Route,
   Switch,
-  Link,
+  //Link,
   Redirect
  } from 'react-router-dom';
 
@@ -22,6 +23,7 @@ class App extends React.Component {
           <Route exact path='/' component={HomePage} />
           <Route exact path='/games' component={GamesPage} />
           <Route exact path='/games/wordguess' component={WordGuess} />
+          <Route exact path='/games/tictactoe' component={TicTacToe} />
           <Route exact path='/pagenotfound' component={PageNotFound} />
           <Redirect to='/pagenotfound' />
         </Switch>
