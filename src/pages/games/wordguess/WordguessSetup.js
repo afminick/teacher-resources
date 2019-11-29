@@ -1,10 +1,11 @@
 import React from 'react'
 import './wordguessStyles/wordguessGameSetup.css'
 
-import LessonSelect from './LessonSelect'
+import LessonSelect from '../../../components/LessonSelect'
 
 function wordguessSetup(props) {
 
+   
     const used = props.data.usedWords.map((item,index) => <li key={item + index}>{item}</li> );
     return (
         <div className='wordguessSetup'>

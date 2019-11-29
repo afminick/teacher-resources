@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
-import config from './config'
+import config from '../pages/games/wordguess/config'
 
-function Background(props) {
+function APIFetch(props) {
     
 
   const [data, setData] = useState({});
@@ -51,11 +51,11 @@ function Background(props) {
             </div>
 
     return(
-        <div>
-            {wordArray[0] ? wordDropdown : null}
-        </div>
+        
+            wordArray[0] ? wordDropdown : null
+        
     )
 }
 
 
-export default Background
+export default APIFetch

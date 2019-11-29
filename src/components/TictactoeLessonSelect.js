@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
-import './wordguessStyles/wordguessLessonSelect.css'
+import '../pages/games/wordguess/wordguessStyles/wordguessLessonSelect.css'
 
-import Background from './Background'
+import TictactoeAPIFetch from './APIFetch'
 
-function LessonSelect(props) {
+function TictactoeLessonSelect(props) {
 
     const [course, setCourse] = useState("MC")
     const [level, setLevel] = useState("")
@@ -41,15 +41,15 @@ function LessonSelect(props) {
                     <option value="2">Lesson Cycle 2</option>
                 </select>
 
-                <Background 
+                <TictactoeAPIFetch 
                     course={course} 
                     level={level}
                     unit={unit}
                     lessonCycle={lessonCycle}
-                    handleChange={props.handleChange}
+                    
                 />
         </div>
     )
 }
 
-export default LessonSelect
+export default TictactoeLessonSelect

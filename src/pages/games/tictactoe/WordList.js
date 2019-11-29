@@ -1,6 +1,9 @@
 import React from 'react'
+import LessonSelect from '../../../components/LessonSelect'
 
 function WordList(props) {
+
+    
     const words = props.words.map((item, index) => 
         <div key={index} className='inputField'>
           <p>{index+1}: </p>
@@ -35,6 +38,8 @@ function WordList(props) {
                 </div>
                   
                 </form>
+
+                <LessonSelect />
                 
             </div>
         )
