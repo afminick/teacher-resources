@@ -12,7 +12,7 @@ function TicTacToe(props) {
   return (
     <div className='tictactoeContainer'>
       <Header />
-      <Game />
+      <Game unitWords={props.unitWords} />
       <Footer />
     </div>
   )

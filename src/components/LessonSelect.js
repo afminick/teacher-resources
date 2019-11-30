@@ -1,14 +1,31 @@
 import React, {useState} from 'react'
 import '../pages/games/wordguess/wordguessStyles/wordguessLessonSelect.css'
 
-import APIFetch from './APIFetch'
-
 function LessonSelect(props) {
 
     const [course, setCourse] = useState("MC")
     const [level, setLevel] = useState("")
     const [unit, setUnit] = useState("")
     const [lessonCycle, setLessonCycle] = useState("")
+
+    let wordArray = []
+
+    if (course && level && unit && lessonCycle) {
+      let wordKey = course + level + unit + lessonCycle + (lessonCycle === "1" ? "6" : "12")
+      wordArray = props.unitWords[wordKey].Words.split(", ")
+      wordArray.unshift(" ")
+    } 
+
+    const wordDropdownWords = wordArray[0] ? 
+            wordArray.map((w, index)=> <option value={w} key={index}>{w}</option>) : null;
+
+          const wordDropdown = 
+            <div className="wordDropdown">
+              <p>Choose a word from the unit</p>
+              <select className="lessonSelectDropdown" name="value" onChange={props.handleChange}>
+                {wordDropdownWords}
+              </select>
+            </div>
 
     return (
         <div className="lessonSelect">
@@ -41,13 +58,9 @@ function LessonSelect(props) {
                     <option value="2">Lesson Cycle 2</option>
                 </select>
 
-                <APIFetch 
-                    course={course} 
-                    level={level}
-                    unit={unit}
-                    lessonCycle={lessonCycle}
-                    handleChange={props.handleChange}
-                />
+                {wordArray[0] ? wordDropdown : null}
+
+                
         </div>
     )
 }

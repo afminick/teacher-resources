@@ -39,7 +39,7 @@ function WordList(props) {
                   
                 </form>
 
-                <TictactoeLessonSelect />
+                <TictactoeLessonSelect unitWords={props.unitWords} />
                 
             </div>
         )

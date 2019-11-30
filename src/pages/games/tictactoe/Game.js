@@ -165,6 +165,7 @@ class Game extends React.Component {
                     words={justWords}
                     data={this.state}
                     reset={this.resetBoard}
+                    unitWords={this.props.unitWords}
                 />
                 <div className='tictactoeArea'>
                     <h1>Let's Play Tic-Tac-Toe!</h1>
