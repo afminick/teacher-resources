@@ -1,5 +1,5 @@
 import React from 'react'
-import LessonSelect from '../../../components/LessonSelect'
+import TictactoeLessonSelect from '../../../components/TictactoeLessonSelect'
 
 function WordList(props) {
 
@@ -39,7 +39,7 @@ function WordList(props) {
                   
                 </form>
 
-                <LessonSelect />
+                <TictactoeLessonSelect />
                 
             </div>
         )

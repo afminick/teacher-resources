@@ -6,11 +6,11 @@ import Footer from '../../../components/Footer';
 
 
 
-const WordGuess = () => {
+const WordGuess = (props) => {
   return (
       <div className="App">
           <Header />
-          <Game />
+          <Game unitWords={props.unitWords} />
           <Footer />        
       </div>
   );

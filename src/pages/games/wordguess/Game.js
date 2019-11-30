@@ -129,7 +129,8 @@ class Wordguess extends React.Component {
                 <WordguessSetup 
                     data={this.state}
                     handleChange={this.handleChange}
-                    submitWord={this.submitWord}/>
+                    submitWord={this.submitWord}
+                    unitWords={this.props.unitWords}/>
                 <WordguessArea
                     data={this.state}
                     guessLetter={this.guessLetter}

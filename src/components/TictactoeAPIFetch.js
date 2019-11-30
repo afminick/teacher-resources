@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from 'react';
-import config from '../pages/games/wordguess/config'
+import config from './config'
 
 function TictactoeAPIFetch(props) {
     
 
-  const [data, setData] = useState({});
+  const [unitWords, setunitWords] = useState({});
 
   useEffect(() => {
 
@@ -12,10 +12,10 @@ function TictactoeAPIFetch(props) {
       .then(res => {
         return res.json()
       })
-      .then(data => {
+      .then(unitWords => {
        
         let masterListOfWords = {}
-        for (const key of data.valueRanges[0].values) {
+        for (const key of unitWords.valueRanges[0].values) {
           masterListOfWords[key[0]+key[1]+key[2]+key[3]+key[4]] = 
             {"Name": key[5],
             "Words":key[6],
@@ -24,7 +24,7 @@ function TictactoeAPIFetch(props) {
             }
         }
 
-        setData(masterListOfWords);
+        setunitWords(masterListOfWords);
        
       })
       
@@ -34,7 +34,7 @@ function TictactoeAPIFetch(props) {
 
     if (props.course && props.level && props.unit && props.lessonCycle) {
       let wordKey = props.course + props.level + props.unit + props.lessonCycle + (props.lessonCycle === "1" ? "6" : "12")
-      wordArray = data[wordKey].Words.split(", ")
+      wordArray = unitWords[wordKey].Words.split(", ")
       wordArray.unshift(" ")
     } 
     
@@ -53,7 +53,7 @@ function TictactoeAPIFetch(props) {
     return(
         
             wordArray[0] ? wordArray : null
-        
+
     )
 }
 

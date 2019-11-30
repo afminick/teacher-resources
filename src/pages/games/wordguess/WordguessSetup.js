@@ -31,6 +31,7 @@ function wordguessSetup(props) {
             </div>
             <LessonSelect 
                 handleChange={props.handleChange}
+                unitWords={props.unitWords}
             />
 
         </div>

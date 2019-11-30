@@ -10,7 +10,12 @@ function TictactoeLessonSelect(props) {
     const [unit, setUnit] = useState("")
     const [lessonCycle, setLessonCycle] = useState("")
 
+   
+
     return (
+
+        
+
         <div className="lessonSelect">
             <select className="lessonSelectDropdown" onChange={(e) => setCourse(e.target.value)}>
                     <option value="MC">Master Course</option>
@@ -41,13 +46,7 @@ function TictactoeLessonSelect(props) {
                     <option value="2">Lesson Cycle 2</option>
                 </select>
 
-                <TictactoeAPIFetch 
-                    course={course} 
-                    level={level}
-                    unit={unit}
-                    lessonCycle={lessonCycle}
-                    
-                />
+                
         </div>
     )
 }
